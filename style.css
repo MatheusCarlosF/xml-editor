@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+}
+
+#head #xmlFileInput {
+    display: none;
+}
+
+.custom-file-upload {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#head button {
+    background-color: #0A95FF;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+}
+
+#contentXml {
+    color: white;
+    background-color: #F56E28;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contentXml pre {
+    display: none;
+}
+
+#contentMain {
+    background-color: #f2f2f9;
+    margin: 20px;
+}
+
+#contentMain h1:first-child {
+    background-color: #F56E28;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#contentMain h2 {
+    background-color: #F56E28;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contentMain h1 {
+    background-color: #F56E28;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lteInputs {
+    padding: 20px 0px;
+}
+
+#lteInputs input {
+    padding: 5px;
+}
+
+#lteInputs label {
+    width: 50px;
+    padding: 5px;
+}
+
+#inputs5g {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.latitude,
+.longitude,
+.eNodeBId,
+.GNodebId {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.latitude label,
+.longitude label,
+.eNodeBId label,
+.GNodebId label {
+    width: 110px;
+    text-align: left;
+}
+
+.latitude input,
+.longitude input,
+.eNodeBId input,
+.GNodebId input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#ips {
+    padding: 20px 0px;
+}
+
+.ipGerencia,
+.cpLTE,
+.upLTE,
+.cp5f,
+.up5g {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ipGerencia label,
+.cpLTE label,
+.upLTE label,
+.cp5f label,
+.up5g label {
+    width: 110px;
+    text-align: left;
+}
+
+.ipGerencia input,
+.cpLTE input,
+.upLTE input,
+.cp5f input,
+.up5g input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#gateways {
+    padding: 20px 0px;
+}
+
+.gwGerencia,
+.gwCP,
+.gwUP {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gwGerencia label,
+.gwCP label,
+.gwUP label {
+    width: 110px;
+    text-align: left;
+}
+
+.gwGerencia input,
+.gwCP input,
+.gwUP input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#portas {
+    padding: 20px 0px;
+}
+
+.speed1,
+.speed2,
+.speed3,
+.speed4 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.speed1 label,
+.speed2 label,
+.speed3 label,
+.speed4 label {
+    width: 110px;
+    text-align: left;
+}
+
+.speed1 input,
+.speed2 input,
+.speed3 input,
+.speed4 input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#configLTE {
+    padding: 20px 0px;
+    display: flex;
+    gap: 10px;
+
+}
+
+.pcis {
+    width: 50vw;
+}
+
+/* .pci1,
+.pci2,
+.pci3 {} */
+
+/* .pci1 label,
+.pci2 label,
+.pci3 label {} */
+
+.pci1 input,
+.pci2 input,
+.pci3 input {
+    width: 100%;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.idxs {
+    width: 50vw;
+}
+
+/* 
+.Idx1,
+.Idx2,
+.Idx3,
+.Idx4,
+.Idx5,
+.Idx6 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.Idx1 label,
+.Idx2 label,
+.Idx3 label,
+.Idx4 label,
+.Idx5 label,
+.Idx6 label {
+    width: 110px;
+    text-align: left;
+    margin-right: 50px;
+}
+*/
+.Idx1 input,
+.Idx2 input,
+.Idx3 input,
+.Idx4 input,
+.Idx5 input,
+.Idx6 input {
+    width: 100%;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Editar e Exportar XML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="head">
+        <h1>Editar e Exportar XML</h1>
+        <input type="file" id="xmlFileInput" accept=".xml">
+        <label for="xmlFileInput" class="custom-file-upload">
+            Escolher arquivo XML
+        </label>
+        <button onclick="carregarXML()">Carregar XML</button>
+    </div>
+
+    <div id="contentXml">
+        <h2>Conteúdo XML</h2>
+        <pre id="xmlContent"></pre>
+    </div>
+
+    <section id="contentMain">
+        <h1>Editar XML</h1>
+        <h2>LTE</h2>
+        <form id="xmlForm">
+            <div id="lteInputs">
+                <label for="nename">Nome do site:</label>
+                <input type="text" id="nename" name="nename"> <input type="text" id="nename_" name="nename_"
+                    placeholder="NOVO NOME">
+            </div>
+            <h1>5G</h1>
+            <div id="inputs5g">
+                <div class="latitude">
+                    <label for="latitudeDegFormat">Latitude:</label>
+                    <input type="text" id="latitudeDegFormat" name="latitudeDegFormat">
+                    <input type="text" id="latitudeDegFormat_" name="latitudeDegFormat_" placeholder="Nova Latitude">
+                </div>
+                <div class="longitude">
+                    <label for="longitudeDegFormat">Longitude:</label>
+                    <input type="text" id="longitudeDegFormat" name="longitudeDegFormat">
+                    <input type="text" id="longitudeDegFormat_" name="longitudeDegFormat_" placeholder="Nova Longitude">
+                </div>
+                <div class="eNodeBId">
+                    <label for="eNodeBId">eNodeBId:</label>
+                    <input type="text" id="eNodeBId" name="eNodeBId">
+                    <input type="text" id="eNodeBId_" name="eNodeBId_" placeholder="Novo ID">
+                </div>
+                <div class="GNodebId">
+                    <label for="gNBId">GNodebId:</label>
+                    <input type="text" id="gNBId" name="gNBId">
+                    <input type="text" id="gNBId_" name="gNBId_" placeholder="Novo ID">
+                </div>
+            </div>
+
+            <h1>IP'S</h1>
+
+            <div id="ips">
+                <div class="ipGerencia">
+                    <label for="SRCIP1">IP de Gerência</label>
+                    <input type="text" id="SRCIP1" name="SRCIP1">
+                    <input type="text" id="SRCIP1_" name="SRCIP1_" placeholder="Novo IP">
+                </div>
+                <div class="cpLTE">
+                    <label for="SRCIP2">IP de CP LTE:</label>
+                    <input type="text" id="SRCIP2" name="SRCIP2">
+                    <input type="text" id="SRCIP2_" name="SRCIP2_" placeholder="Novo IP">
+                </div>
+                <div class="upLTE">
+                    <label for="SRCIP3">IP de UP LTE:</label>
+                    <input type="text" id="SRCIP3" name="SRCIP3">
+                    <input type="text" id="SRCIP3_" name="SRCIP3_" placeholder="Novo IP">
+                </div>
+                <div class="cp5f">
+                    <label for="SRCIP4">IP de CP 5G:</label>
+                    <input type="text" id="SRCIP4" name="SRCIP4">
+                    <input type="text" id="SRCIP4_" name="SRCIP4_" placeholder="Novo IP">
+                </div>
+                <div class="up5g">
+                    <label for="SRCIP5">IP de UP 5G:</label>
+                    <input type="text" id="SRCIP5" name="SRCIP5">
+                    <input type="text" id="SRCIP5_" name="SRCIP5_" placeholder="Novo IP">
+                </div>
+            </div>
+            <h1>GATEWAYS</h1>
+            <div id="gateways">
+                <div class="gwGerencia">
+                    <label for="NEXTHOP1">Gateway de Gerência:</label>
+                    <input type="text" id="NEXTHOP1" name="NEXTHOP1">
+                    <input type="text" id="NEXTHOP1_" name="NEXTHOP1_" placeholder="Novo IP">
+                </div>
+                <div class="gwCP">
+                    <label for="NEXTHOP2">Gateway de CP:</label>
+                    <input type="text" id="NEXTHOP2" name="NEXTHOP2">
+                    <input type="text" id="NEXTHOP2_" name="NEXTHOP2_" placeholder="Novo IP">
+                </div>
+                <div class="gwUP">
+                    <label for="NEXTHOP3">Gateway de UP:</label>
+                    <input type="text" id="NEXTHOP3" name="NEXTHOP3">
+                    <input type="text" id="NEXTHOP3_" name="NEXTHOP3_" placeholder="Novo IP">
+                </div>
+            </div>
+
+            <h1>DEMAIS CONFIGURAÇÕES</h1>
+
+            <div id="portas">
+                <div class="speed1">
+                    <label for="SPEED1">Porta de cobre</label>
+                    <input type="text" id="SPEED1" name="SPEED1">
+                </div>
+                <div class="speed2">
+                    <label for="SPEED2">Porta de fibra:</label>
+                    <input type="text" id="SPEED2" name="SPEED2">
+                </div>
+                <div class="speed3">
+                    <label for="SPEED3">Porta de cobre</label>
+                    <input type="text" id="SPEED3" name="SPEED3">
+                </div>
+                <div class="speed4">
+                    <label for="SPEED4">Porta de fibra:</label>
+                    <input type="text" id="SPEED4" name="SPEED4">
+                </div>
+            </div>
+
+            <h1>CONFIGURAÇÕES LTE</h1>
+
+            <div id="configLTE">
+                <div class="pcis">
+                    <div class="pci1">
+                        <div>
+                            <label for="PhyCellId1">PCI 1:</label>
+                            <input type="text" id="PhyCellId1" name="PhyCellId1">
+                        </div>
+                        <div>
+                            <label for="PhyCellId2">PCI 1:</label>
+                            <input type="text" id="PhyCellId2" name="PhyCellId2">
+                        </div>
+                    </div>
+                    <div class="pci2">
+                        <div>
+                            <label for="PhyCellId3">PCI 2:</label>
+                            <input type="text" id="PhyCellId3" name="PhyCellId3">
+                        </div>
+                        <div>
+                            <label for="PhyCellId4">PCI 2:</label>
+                            <input type="text" id="PhyCellId4" name="PhyCellId4">
+                        </div>
+                    </div>
+                    <div class="pci3">
+                        <div>
+                            <label for="PhyCellId5">PCI 3:</label>
+                            <input type="text" id="PhyCellId5" name="PhyCellId5">
+                        </div>
+                        <div>
+                            <label for="PhyCellId6">PCI 3:</label>
+                            <input type="text" id="PhyCellId6" name="PhyCellId6">
+                        </div>
+                    </div>
+                </div>
+                <div class="idxs">
+                    <div>
+                        <div class="Idx1">
+                            <label for="RootSequenceIdx1">RootSequenceIdx1:</label>
+                            <input type="text" id="RootSequenceIdx1" name="RootSequenceIdx1">
+                        </div>
+                        <div class="Idx2">
+                            <label for="RootSequenceIdx2">RootSequenceIdx2:</label>
+                            <input type="text" id="RootSequenceIdx2" name="RootSequenceIdx2">
+                        </div>
+                        <div class="Idx3">
+                            <label for="RootSequenceIdx3">RootSequenceIdx3:</label>
+                            <input type="text" id="RootSequenceIdx3" name="RootSequenceIdx3">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Idx4">
+                            <label for="RootSequenceIdx4">RootSequenceIdx4:</label>
+                            <input type="text" id="RootSequenceIdx4" name="RootSequenceIdx4">
+                        </div>
+                        <div class="Idx5">
+                            <label for="RootSequenceIdx5">RootSequenceIdx5:</label>
+                            <input type="text" id="RootSequenceIdx5" name="RootSequenceIdx5">
+                        </div>
+                        <div class="Idx6">
+                            <label for="RootSequenceIdx6">RootSequenceIdx6:</label>
+                            <input type="text" id="RootSequenceIdx6" name="RootSequenceIdx6">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <label for="Tac1">TAC:</label>
+                <input type="text" id="Tac1" name="Tac1">
+            </div>
+
+            <h1>CONFIGURAÇÕES 5G</h1>
+
+            <div id="config5g">
+                <div>
+                    <label for="PhysicalCellId1">PCI 1:</label>
+                    <input type="text" id="PhysicalCellId1" name="PhysicalCellId1">
+                </div>
+                <div>
+                    <label for="PhysicalCellId2">PCI 2:</label>
+                    <input type="text" id="PhysicalCellId2" name="PhysicalCellId2">
+                </div>
+                <div>
+                    <label for="PhysicalCellId3">PCI 3:</label>
+                    <input type="text" id="PhysicalCellId3" name="PhysicalCellId3">
+                </div>
+                <div>
+                    <label for="LogicalRootSequenceIndex1">LogicalRootSequenceIndex:</label>
+                    <input type="text" id="LogicalRootSequenceIndex1" name="LogicalRootSequenceIndex1">
+                </div>
+                <div>
+                    <label for="LogicalRootSequenceIndex2">LogicalRootSequenceIndex:</label>
+                    <input type="text" id="LogicalRootSequenceIndex2" name="LogicalRootSequenceIndex2">
+                </div>
+                <div>
+                    <label for="LogicalRootSequenceIndex3">LogicalRootSequenceIndex:</label>
+                    <input type="text" id="LogicalRootSequenceIndex3" name="LogicalRootSequenceIndex3">
+                </div>
+                <div class="tac">
+                    <label for="Tac">TAC:</label>
+                    <input type="text" id="Tac" name="Tac">
+                    <input type="button" value="Salvar Alterações" onclick="salvarXML()">
+                    <span id="mensagemSucesso" style="display: none; color: green;"></span>
+                    </br>
+                    <button id="exportButton" style="display: none;">Exportar XML Editado</button>
+                </div>
+            </div>
+        </form>
+        <a id="downloadLink" style="display: flex;" download="xml_editado.xml">Download XML Editado</a>
+    </section>
+
+    <script src="./scripts.js"> </script>
+</body>
+
+</html>
